@@ -1,0 +1,40 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  border: 1px;
+  border-style: solid;
+}
+.logo{
+  width: 100px;
+}
+.nav-items>ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 20px;
+}
+.nav-items>ul>li{
+  padding: 10px;
+  margin: 10px;
+}
+.resto-card{
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius:6px ;
+  padding:20px;
+  margin: 40px;
+}
+
+.order-button:hover{
+  background-color: blue;
+  color: white;
+  border-radius: 7px;
+  border-width: 1px;
+  font-weight: bold;
+}
+.resto-img{
+  width: 200px;
+}
+
+
