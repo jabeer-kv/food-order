@@ -1,4 +1,4 @@
-import logo from './assets/download (4).jpeg'
+import logo from '../assets/download (4).jpeg'
 function Header() {
     return (
         <div className='header'>

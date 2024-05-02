@@ -1,6 +1,4 @@
-import Restocard from "./resto-card";
-function Body() {
-  const fakedata = [
+let FAKEDATA= [
     {
       name: "Pizza Hut",
       id: 250361,
@@ -50,19 +48,4 @@ function Body() {
       promoted: false,
     },
   ];
-
-  return (
-    <>
-      <div className="search">
-        <input type="text" />
-        <button>search</button>
-      </div>
-      <div  className="res-card">
-        {fakedata.map((item) => (
-          <Restocard key={item.id} restdata={item} />
-        ))}
-      </div>
-    </>
-  );
-}
-export default Body;
+export default FAKEDATA;
