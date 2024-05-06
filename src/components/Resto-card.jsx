@@ -1,6 +1,5 @@
 function Restocard(props) {
-    console.log(props);
-  const { name, cat, img,rat} = props.restdata;
+  const { name, cat, img,rat} = props;
   return (
     <div  className="resto-card">
       <div>
