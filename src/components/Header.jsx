@@ -1,5 +1,7 @@
 import logo from '../assets/download (4).jpeg'
+import { useState } from 'react'
 function Header() {
+    const [change,setchange]=useState("login")
     return (
         <div className='header'>
             <div className='logo-container'>
@@ -19,6 +21,12 @@ function Header() {
                     </li>
                     <li>
                         cart
+                    </li>
+                    <li>
+                        <button onClick={ ()=>{
+                            setchange("logout")
+                        }}
+                        >{change}</button>
                     </li>
                 </ul>
             </div>
