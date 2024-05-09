@@ -11,6 +11,10 @@ function Body() {
         
         <button onClick={()=>{
           console.log(searchdata);
+          const filterd=data.filter((jus)=>
+              jus.name.toLocaleLowerCase().includes(searchdata.toLocaleLowerCase())
+          )
+          setdata(filterd)
         }}>search</button>
       
       

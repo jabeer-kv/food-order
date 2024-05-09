@@ -1,7 +1,10 @@
 import logo from '../assets/download (4).jpeg'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 function Header() {
     const [change,setchange]=useState("login")
+    useEffect(()=>{
+        console.log("its me use effect");
+    },[change])
     return (
         <div className='header'>
             <div className='logo-container'>
@@ -24,7 +27,9 @@ function Header() {
                     </li>
                     <li>
                         <button onClick={ ()=>{
-                            setchange("logout")
+                            change==="login"
+                            ? setchange("logout")
+                            : setchange("login")
                         }}
                         >{change}</button>
                     </li>
