@@ -1,47 +1,26 @@
 import About from "./components/About";
-import Error from "./components/Error";
-import Home from "./components/Home";
 import Body from "./components/Body";
 import Contact from "./components/Contact";
-// import Header from "./components/Header";
-import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import { Routes,Route,BrowserRouter } from "react-router-dom";
 function App() {
   return(
     <div>
-      
-      <Outlet/>
-      <RouterProvider router={appRouter}/>
+      <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<Body/>}/>
+        <Route exact path="/about" element={<About/>} />
+        <Route exact path="/contact" element={<Contact/>} />
+        <Route exact path="/body" element={<Body/>} />
+        <Route exact path="/menu/:resId" element={<Menu/>} />
+        {/* <Route exact path="/error" element={<Error/>} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
-      
-  )
- 
-
+)
 }
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>,
-    children: [
-      {
-        path: "/",
-        element: <Body/>,
-        
-      },
-      {
-      
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact/>,
-      }
-
-    ],
-    errorElement: <Error/>,
-  },
-  
-]);
 
 
 export default App;
