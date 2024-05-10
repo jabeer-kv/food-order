@@ -1,5 +1,6 @@
 import logo from '../assets/download (4).jpeg'
 import { useState,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 function Header() {
     const [change,setchange]=useState("login")
     useEffect(()=>{
@@ -16,11 +17,12 @@ function Header() {
                     <li>
                         home
                     </li>
-                    <li>
-                        about
+                    <li> 
+                        <Link to="/about"> about</Link>
+                       
                     </li>
                     <li>
-                        contact
+                       <Link to="/contact">contact </Link>
                     </li>
                     <li>
                         cart
